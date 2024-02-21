@@ -1,0 +1,65 @@
+.intro-section {
+  min-width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: -10;
+  min-height: 70vh;
+  overflow: hidden;
+}
+
+.intro-text-section {
+  padding: 3vw;
+}
+
+.ish {
+  text-transform: uppercase;
+  min-width: 100%;
+  padding: 15px;
+  color: var(--primary);
+  flex-direction: column;
+  display: flex;
+  gap: 5px;
+}
+
+.ish span, .o2{
+  font-size: small;
+  color: var(--linkColor);
+}
+
+.o2{
+  display: inline-block;
+  margin-right:auto;
+  padding-bottom: 10px;
+  width: 100%;
+  font-weight: 700;
+  
+}
+
+.div-line {
+  border-top: 1px solid rgb(196, 195, 195); /* Adjust border thickness for visibility */
+}
+
+
+
+@media only screen and (min-width: 760px) {
+  .intro-text-section {
+   text-align: left;
+    overflow: hidden;
+  }
+
+  .intro-par{
+    padding:  0 1em;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 20px;
+  }
+
+  .intro-par h3, p{
+    padding:  1.4em 0;
+    min-width: 0;
+  }
+  
+  .intro-text-section h2 {
+    margin-top: 2vw; /* Adjust margin relative to viewport width */
+  }
+}

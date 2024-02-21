@@ -1,0 +1,353 @@
+.project-section {
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding-top: 3em;
+  min-width: 100%;
+  padding: 16px;
+  padding-bottom: 0;
+  border-radius: 4rem;
+  position: relative;
+  box-shadow: 0 0 7px 0px #5e5e5e;
+  min-height: 100vh;
+  z-index: 40;
+}
+
+.project-wrapper {
+  padding-top: 5rem;
+}
+
+.line,
+.phoneline {
+  position: absolute;
+  background-color: var(--secondary);
+}
+
+.line {
+  min-height: 10px;
+  width: 7em;
+  top: 2.5%;
+  left: 35%;
+  border-radius: 20px;
+}
+
+.wifi {
+  height: 25px;
+  position: absolute;
+  top: 2%;
+  right: 12%;
+}
+
+.phoneline {
+  width: 10.5em;
+  min-height: 0.1px;
+  top: 3.7%;
+  left: 28%;
+  border-radius: 20px;
+}
+
+.Ac-card {
+  cursor: pointer;
+  min-width: 100%;
+  margin-top: 5px;
+}
+
+.projects {
+  flex-wrap: wrap;
+  padding-bottom: 3.5em;
+}
+
+.ac-card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+  .shop-circle {
+    background-color: var(--primary);
+    border-radius: 50%;
+    color: var(--secondary);
+    width: 50px;
+    height: 50px;
+    border: 1px solid #1d1d1b12;
+    position: absolute;
+    bottom: 3.5%;
+    right: 3.5%;
+    transition: all 0.4s ease;
+    display: none;
+  }
+
+.ac-card-details div {
+  width: 100%;
+}
+
+.ac-card-details button {
+  min-height: 9.5vw;
+  outline: none;
+  border: 1px solid var(--linkColor);
+  padding: 1em 1.5em;
+  letter-spacing: 0.7px;
+  background-color: inherit;
+  color: inherit;
+  border-radius: 4em; 
+}
+
+
+
+.DisDev {
+  border-bottom: 1px solid var(--linkColor);
+  padding-bottom: 30px;
+}
+
+.phoneBtn {
+  border: 3px solid var(--secondary);
+  border-radius: 50%;
+  color: var(--secondary);
+  background-color: inherit;
+  width: 65px;
+  height: 65px;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.phoneBtn:hover {
+  width: 75px;
+  height: 75px;
+  border-color: rgb(209, 209, 209);
+}
+
+.whitebtn-div {
+  background-color: var(--secondary) !important;
+  z-index: 95 !important;
+  padding-top: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+
+.ac-card-details h3{
+  padding-bottom: 20px;
+  font-weight: 300;
+}
+
+
+
+.phone-btn-div {
+  margin-top: 35px;
+  width: 100%;
+  z-index: 10;
+  padding-bottom: 0;
+  gap: 14px;
+  flex-direction: column;
+}
+.phone-btn-div .box {
+  min-height: 1.7em;
+  width: 1.7em;
+  background-color: var(--secondary);
+  bottom: 17px;
+  left: 26%;
+}
+
+.phone-btn-div .circle {
+  min-height: 3.7em;
+  min-width: 3.7em;
+  border-radius: 50%;
+  bottom: 17px;
+  left: 26%;
+  background-color: rgba(0, 0, 0, 0) !important;
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--linkColor);
+}
+
+.info-white {
+  border: 1px solid lightgray;
+  color: var(--primary);
+  margin: 6em 0;
+  outline: none;
+  padding: 1em;
+  min-width: 50%;
+  min-height: 7.5vh;
+}
+
+.show-bg {
+  padding: 0.3em;
+}
+
+.services-section {
+  min-width: 100%;
+}
+
+.fback-color img{
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 22em;
+  max-height: 22em;
+  object-fit: cover;
+  border-radius: 4px;
+  background-color: #000000;
+
+}
+.project-img{
+  background-color: #00000034;
+  backdrop-filter: blur(4px);
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  min-width: 0;
+  min-height: 22em;
+  max-height: 22em;
+  object-fit: cover;
+  border-radius: 4px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: relative;
+  z-index: 7;
+
+}
+
+.grid-bg-screen {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  grid-column: auto;
+  gap: 1em;
+  overflow: hidden;
+  display: block;
+}
+.small-grid{
+  font-size: 5px;
+  
+}
+
+
+@media only screen and (min-width: 720px) {
+  .phoneline {
+    display: none;
+  }
+
+  .grid-bg-screen {
+    display: block;
+  }
+
+  .Ac-card {
+    padding: 5px 1em;
+  }
+
+  .line {
+    left: 43%;
+  }
+
+  .wifi {
+    height: 30px;
+    right: 10%;
+  }
+
+  .services-section {
+    padding: 0 3em;
+  }
+
+  .back-color img {
+    display: block;
+    object-fit: contain;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .grid-bg-screen {
+    display: grid;
+  }
+
+  .project-img{
+   padding: 30px;
+  }
+  .back-color{
+    display: block;
+    width: 100%;
+    background-color: #545557e5;
+    border: 1px solid rgb(71, 71, 71);
+    backdrop-filter: blur(4px);
+    border-radius: 1px;
+    padding: 2em 1em;
+  }
+
+  .ac-card-details button {
+    border-radius: 4em;
+    width: auto;
+    font-size: 16px;
+    min-height: 0;
+    padding: 13px 15px;
+    font-weight: 100;
+  }
+
+  .ac-card-details {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .img-absolute-div {
+    min-width: fit-content;
+    background-size: contain;
+    z-index: 1;
+    background-color: rgba(34, 33, 33, 0.195);
+    background-blend-mode: darken;
+  }
+}
+
+.small-grid{
+  font-size: 5px;
+  border-radius: 4em;
+  width: auto;
+  font-size: 6px;
+  padding: 0;
+  font-weight: 100;
+  background-color: pink;
+  display: flex;
+}
+
+
+@media only screen and (min-width: 2000px) {
+
+  .wifi {
+    width: 7em;
+    height: 4em;
+  }
+
+ 
+
+  .ac-card-details button {
+    font-size: clamp(1em, 2vw, 2.5em);
+    padding: 1.5em;
+    border-radius: 3em;
+    margin-bottom: 30px;
+  }
+
+  .info-white {
+    padding: 2em 5em;
+    font-size: 1.5rem;
+    width: 500px;
+  }
+
+  .services-section {
+    padding: 0 4em;
+    min-width: 100%;
+  }
+
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .services-section {
+    display: flex;
+    align-items: baseline;
+  }
+}

@@ -1,0 +1,8 @@
+.jokes h2{
+    padding: 2em;
+    border-bottom: none;
+}
+
+.jokes{
+    overflow: hidden;
+}

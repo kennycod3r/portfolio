@@ -1,38 +1,104 @@
-.App {
+@import "animate.css";
+
+:root {
+  --primary: #1c1d20;
+  --text-color: #1c1d20;
+  --secondary: #ebf0f4;
+  --linkColor: rgb(97, 97, 97);
+  --boxShadow: 0 0 7px 0px #6d6d6d;
+  --header: clamp(3.55em, 2.3vw, 2.5em);
+
+  --animationSmooth: all 0.7s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.outerDiv {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-width: 100%;
+  position: relative;
+}
+
+.over-screen {
+  min-height: 100svh;
+  padding: 10px;
+  background-color: var(--primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  min-width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 3em;
+  color: var(--secondary);
+  background-color: var(--primary);
+  overflow: hidden;
+}
+
+.over-screen h1 {
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: clamp(26px, 9.2vw, 59px);
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.over-screen p {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.svg {
+  width: 30px;
+  height: 30px;
+}
+
+.side-nav {
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0 !important;
+  z-index: 90;
+  background-color: var(--secondary) !important;
+  min-width: 60%;
+  overflow: hidden;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  gap: 15px;
+  transform: translateX(100%);
+  box-shadow: 0 0 7px 0px #6d6d6d63;
 }
 
-.App-link {
-  color: #61dafb;
+.side-nav div {
+  font-size: 2.5rem;
+  transform: translateY(50%);
+  opacity: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.Nav {
+  transition: var(--animationSmooth);
+  transition-duration: 0.1s;
+  text-align: left;
+}
+.Nav:hover {
+  color: rgb(235, 181, 236) !important;
+}
+
+.sidebar-line {
+  height: 0.1px;
+  background-color: var(--linkColor);
+  min-width: 70%;
+}
+@media only screen and (min-width: 760px) {
+  .side-nav {
+    min-width: 40%;
   }
 }

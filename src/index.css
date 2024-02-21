@@ -1,13 +1,122 @@
-body {
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--secondary);
+  font-style: normal;
+  color: var(--primary);
+  scroll-behavior: smooth;
+  transition: var(--animationSmooth);
+}
+
+.fsb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 99 !important;
+  min-width: 100%;
+  transition: var(--animationSmooth);
+  animation-duration: 2s;
+  animation-delay: 1s;
+  min-height: 30px;
+}
+
+
+.header--text {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.75;
+}
+
+.btns {
+  padding: 2em;
+  outline: none;
+  border: none;
+  border: 0.0001px solid rgb(255, 255, 255);
+  background-color: inherit;
+  color: var(--secondary);
+  border-radius: 3em;
+  overflow: hidden;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+  min-width: 250px;
+}
+
+.header--one {
+  text-shadow: var(--boxShadow);
+  font-size: clamp(3.55em, 2.3vw, 2.5em);
+  line-height: 0.8;
+  font-weight: 700;
+}
+.header--two {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: pink;
+}
+.header--three {
+  font-weight: 400;
+  padding: 2em 0;
+  font-size: 2rem;
+}
+
+
+.button-font{
+  font-size: 1em;
+}
+
+
+
+.body--text {
+  width: 100%;
+  font-size: clamp(1.4em, 0.3vw, 2.5em);
+  line-height: 1.75;
+  font-weight: 300;
+  padding: 30px 0;
+}
+
+.body--text-2 {
+  font-size: clamp( 1.2em, .3vw, 2.5em);
+  font-weight: 300;
+  padding: 1.3em;
+  text-align: left;
+  color: var(--primary);
+  max-width: 30em;
+  min-width: 100%;
+  line-height: 1.6em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .header--one {
+    font-size: clamp(3rem,-.057rem + 8vw,7.25rem);
+   
+  }
+
+  .header--two{
+    font-size: 4rem;
+    font-size: calc(clamp(3.25em, 7vw, 8em) * .375);
+  }
+
+  .button-font{
+    font-size: 1em;
+  }
 }
