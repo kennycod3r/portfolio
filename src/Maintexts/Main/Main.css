@@ -28,11 +28,9 @@
 
 .o2{
   display: inline-block;
-  margin-right:auto;
   padding-bottom: 10px;
   width: 100%;
   font-weight: 700;
-  
 }
 
 .div-line {
@@ -41,10 +39,9 @@
 
 
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 730px) {
   .intro-text-section {
    text-align: left;
-    overflow: hidden;
   }
 
   .intro-par{
@@ -60,6 +57,6 @@
   }
   
   .intro-text-section h2 {
-    margin-top: 2vw; /* Adjust margin relative to viewport width */
+    margin-top: 2vw;
   }
 }

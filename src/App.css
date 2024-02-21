@@ -7,7 +7,6 @@
   --linkColor: rgb(97, 97, 97);
   --boxShadow: 0 0 7px 0px #6d6d6d;
   --header: clamp(3.55em, 2.3vw, 2.5em);
-
   --animationSmooth: all 0.7s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
@@ -23,7 +22,6 @@
 .over-screen {
   min-height: 100svh;
   padding: 10px;
-  background-color: var(--primary);
   position: absolute;
   top: 0;
   left: 0;
@@ -68,35 +66,30 @@
   min-width: 60%;
   overflow: hidden;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
-  gap: 15px;
+  gap: 12px;
   transform: translateX(100%);
   box-shadow: 0 0 7px 0px #6d6d6d63;
 }
 
 .side-nav div {
   font-size: 2.5rem;
-  transform: translateY(50%);
   opacity: 0;
 }
 
 .Nav {
-  transition: var(--animationSmooth);
-  transition-duration: 0.1s;
-  text-align: left;
+  transition: all 0.1s cubic-bezier(0.7, 0, 0.3, 1);
+  text-align: center;
+  color: var(--primary);
+  width: 100%;
+  padding: 0 10px;
 }
 .Nav:hover {
-  color: rgb(235, 181, 236) !important;
+  color: pink !important;
+  animation: pulse 1s;
 }
 
-.sidebar-line {
-  height: 0.1px;
-  background-color: var(--linkColor);
-  min-width: 70%;
-}
 @media only screen and (min-width: 760px) {
   .side-nav {
     min-width: 40%;

@@ -11,9 +11,9 @@ export default function AboutMe() {
         <div className="img-text-div">
           <img className="profile-img" src={profile} alt="profileImg" />
           <p className="body--text about-me-p img-text">
-            I help companies from all over the world with tailor-made solutions.
-            With each project, I push my work to new horizons, always putting
-            quality first.
+            <span className="o2">04</span>I help companies from all over the
+            world with tailor-made solutions. With each project, I push my work
+            to new horizons, always putting quality first.
           </p>
         </div>
 
@@ -23,32 +23,32 @@ export default function AboutMe() {
           </h2>
 
           <p className="body--text about-me-p">
-            I help companies from all over the world with tailor-made solutions.
-            With each project, I push my work to new horizons, always putting
-            quality first.
+            <span className="o2">05</span>I help companies from all over the
+            world with tailor-made solutions. With each project, I push my work
+            to new horizons, always putting quality first.
           </p>
           <p className="body--text about-me-header">I can help with</p>
         </div>
-        
+
         <div className="recomendations">
           <div>
-            <div className="shop-circle"></div>
-            <p className="body--text about-me-p">
-              I help companies from all over the world with tailor-made
-              solutions. With each project, I push my work to new horizons,
-              always putting quality first.
+            <p className="about-me-p">
+              <span className="o2">06</span>I help companies from all over the
+              world with tailor-made solutions. With each project, I push my
+              work to new horizons, always putting quality first.
             </p>
           </div>
+
           <div>
-            <div className="shop-circle"></div>
-            <p className="body--text about-me-p">
-              I help companies from all over the world with tailor-made
-              solutions. With each project, I push my work to new horizons,
-              always putting quality first.
+            <p className="about-me-p">
+              <span className="o2">07</span>I help companies from all over the
+              world with tailor-made solutions. With each project, I push my
+              work to new horizons, always putting quality first.
             </p>
           </div>
+
         </div>
-        <Joke/>
+        <Joke />
 
         <p className="body--text">Keep Exploring?</p>
       </div>

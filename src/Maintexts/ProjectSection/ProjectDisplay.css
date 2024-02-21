@@ -13,42 +13,66 @@
 }
 
 .project-wrapper {
-  padding-top: 5rem;
+  padding-top: 1.8rem;
 }
 
-.line,
-.phoneline {
-  position: absolute;
-  background-color: var(--secondary);
+.time-div {
+  color: var(--secondary);
+  min-width: 100%;
+  text-align: left;
+  padding-left: 1em;
+}
+
+.time-div span{
+  display: inline-block !important;
+  text-align: center;
+  background-color:#6477f019;
+  border-radius: 4em;
+  padding: 2px 15px;
 }
 
 .line {
-  min-height: 10px;
-  width: 7em;
-  top: 2.5%;
-  left: 35%;
+  background-color: var(--secondary);
+  height: 10px;
+  max-width: 9em;
   border-radius: 20px;
 }
 
 .wifi {
-  height: 25px;
+  max-height: 23px;
   position: absolute;
-  top: 2%;
-  right: 12%;
+  right: 9%;
+  top: 0;
 }
 
-.phoneline {
-  width: 10.5em;
-  min-height: 0.1px;
-  top: 3.7%;
-  left: 28%;
-  border-radius: 20px;
+.phone-top {
+  margin-top: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.phone-line-div {
+  min-height: 30px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.phone-line {
+  min-height: 1px;
+  margin-bottom: 25px;
+  min-width: 50%;
+  display: inline-block !important;
 }
 
 .Ac-card {
   cursor: pointer;
   min-width: 100%;
-  margin-top: 5px;
 }
 
 .projects {
@@ -60,25 +84,25 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
-  .shop-circle {
-    background-color: var(--primary);
-    border-radius: 50%;
-    color: var(--secondary);
-    width: 50px;
-    height: 50px;
-    border: 1px solid #1d1d1b12;
-    position: absolute;
-    bottom: 3.5%;
-    right: 3.5%;
-    transition: all 0.4s ease;
-    display: none;
-  }
+.shop-circle {
+  background-color: var(--primary);
+  border-radius: 50%;
+  color: var(--secondary);
+  width: 50px;
+  height: 50px;
+  border: 1px solid #1d1d1b12;
+  position: absolute;
+  bottom: 3.5%;
+  right: 3.5%;
+  transition: all 0.4s ease;
+  display: none;
+}
 
 .ac-card-details div {
-  width: 100%;
+  min-width: 100%;
 }
 
 .ac-card-details button {
@@ -89,10 +113,14 @@
   letter-spacing: 0.7px;
   background-color: inherit;
   color: inherit;
-  border-radius: 4em; 
+  border-radius: 4em;
+  transition: all .1s ease-in-out;
 }
 
-
+.ac-card-details button:hover{
+  background-color: pink;
+  color: var(--primary);
+}
 
 .DisDev {
   border-bottom: 1px solid var(--linkColor);
@@ -116,25 +144,10 @@
   border-color: rgb(209, 209, 209);
 }
 
-.whitebtn-div {
-  background-color: var(--secondary) !important;
-  z-index: 95 !important;
-  padding-top: 4em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-
-
-.ac-card-details h3{
+.ac-card-details h3 {
   padding-bottom: 20px;
   font-weight: 300;
 }
-
-
 
 .phone-btn-div {
   margin-top: 35px;
@@ -163,45 +176,17 @@
   border: 1px solid var(--linkColor);
 }
 
-.info-white {
-  border: 1px solid lightgray;
-  color: var(--primary);
-  margin: 6em 0;
-  outline: none;
-  padding: 1em;
-  min-width: 50%;
-  min-height: 7.5vh;
-}
-
 .show-bg {
   padding: 0.3em;
 }
 
-.services-section {
-  min-width: 100%;
-}
-
-.fback-color img{
-  display: block;
-  width: 100%;
-  min-width: 0;
-  min-height: 22em;
-  max-height: 22em;
-  object-fit: cover;
-  border-radius: 4px;
-  background-color: #000000;
-
-}
-.project-img{
+.project-img {
   background-color: #00000034;
   backdrop-filter: blur(4px);
   width: 100%;
-  object-fit: cover;
   display: block;
-  min-width: 0;
   min-height: 22em;
   max-height: 22em;
-  object-fit: cover;
   border-radius: 4px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -210,32 +195,13 @@
   backface-visibility: hidden;
   position: relative;
   z-index: 7;
-
 }
 
-.grid-bg-screen {
-  display: grid;
-  grid-template-columns: 2fr 1.5fr;
-  grid-column: auto;
-  gap: 1em;
-  overflow: hidden;
-  display: block;
+.small-grid {
+  font-size: 5px; 
 }
-.small-grid{
-  font-size: 5px;
-  
-}
-
 
 @media only screen and (min-width: 720px) {
-  .phoneline {
-    display: none;
-  }
-
-  .grid-bg-screen {
-    display: block;
-  }
-
   .Ac-card {
     padding: 5px 1em;
   }
@@ -249,10 +215,6 @@
     right: 10%;
   }
 
-  .services-section {
-    padding: 0 3em;
-  }
-
   .back-color img {
     display: block;
     object-fit: contain;
@@ -262,14 +224,11 @@
     display: none;
   }
 
-  .grid-bg-screen {
-    display: grid;
-  }
 
-  .project-img{
-   padding: 30px;
+  .project-img {
+    padding: 30px;
   }
-  .back-color{
+  .back-color {
     display: block;
     width: 100%;
     background-color: #545557e5;
@@ -302,7 +261,7 @@
   }
 }
 
-.small-grid{
+.small-grid {
   font-size: 5px;
   border-radius: 4em;
   width: auto;
@@ -313,41 +272,16 @@
   display: flex;
 }
 
-
 @media only screen and (min-width: 2000px) {
-
   .wifi {
     width: 7em;
     height: 4em;
   }
-
- 
 
   .ac-card-details button {
     font-size: clamp(1em, 2vw, 2.5em);
     padding: 1.5em;
     border-radius: 3em;
     margin-bottom: 30px;
-  }
-
-  .info-white {
-    padding: 2em 5em;
-    font-size: 1.5rem;
-    width: 500px;
-  }
-
-  .services-section {
-    padding: 0 4em;
-    min-width: 100%;
-  }
-
-
-}
-
-@media only screen and (min-width: 1200px) {
-
-  .services-section {
-    display: flex;
-    align-items: baseline;
   }
 }

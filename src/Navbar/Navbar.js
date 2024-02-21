@@ -4,16 +4,20 @@ import HamburgerMenu from "../Components/Hamburger";
 
 export default function Navbar({ handleNavOpen, openNav }) {
   const [scrolledPastPoint, setScrolledPastPoint] = useState(false);
+  
 
   useEffect(() => {
     function handleScroll() {
-      const heroSection = document.querySelector(".Hero"); // Adjust the selector as needed
+      const heroSection = document.querySelector(".Hero");
+     
       if (!heroSection) return; // Check if hero section is found
 
       // Get the height of the hero section
       const heroHeight = heroSection.getBoundingClientRect().height;
 
       // Determine if the user has scrolled past the hero section
+      
+
 
       if (window.scrollY > heroHeight + 17) {
         setScrolledPastPoint(true);
@@ -33,7 +37,7 @@ export default function Navbar({ handleNavOpen, openNav }) {
     <header className={scrolledPastPoint ? "sticky-header" : "absolute-header"}>
       <div className="inner-nav fsb">
         <div className="Knny-logo" style={scrolledPastPoint ? {display:"none"} : {display:"block"}}>KNNY</div>
-        <HamburgerMenu handleNavOpen={handleNavOpen} openNav={openNav} />
+        <HamburgerMenu handleNavOpen={handleNavOpen} openNav={openNav} scrolledPastPoint = {scrolledPastPoint} />
       </div>
     </header>
   );

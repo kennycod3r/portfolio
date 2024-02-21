@@ -2,7 +2,7 @@
 
 .Hero {
   min-height: 80vh;
-  border-bottom: 0.1px solid lightgray;
+  border-bottom: 0.1px solid rgb(198, 198, 198);
   background-image: url("C:\Users\KENNY\portFollio\kennyportfollio\src\img\hello.webp");
   background-size: cover;
   background-repeat: no-repeat;
@@ -28,15 +28,14 @@
   border-bottom: 1px solid lightgray;
   min-width: 74%;
 }
+
 .hello-hero em{
   color: var(--primary);
   transition: all ease .4s;
 }
 
 .hello-hero em:hover{
-  transform:rotateX('-130deg');
   padding: 20px;
-  animation: rubberBand .4s;
 }
 
 .unemployed-div{
@@ -44,8 +43,7 @@
   background-color: var(--primary);
   left: .7px;
   bottom: 10px;
-  padding: 20px;
-  padding-right: 29px;
+  padding: 30px 20px;
   z-index: 78;
   border-top-right-radius: 4em;
   border-bottom-right-radius: 4em;
@@ -54,27 +52,28 @@
 
 .small-text{
   position: absolute;
-  right: 15px;
-  min-width: 40%;
-  text-align: right;
+  right: .7px;
   bottom: 0;
-  padding: 10px 1em;
-  
+  padding: 10px 1em; 
 }
 
 .ken-mail{
   font-weight: 700;
   letter-spacing: .7px;
   text-transform: uppercase;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 15px;
+  padding: 0;
+  min-width: 100%;
 }
 
 .hero-p2{
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
   color: var(--secondary);
   text-transform: capitalize;
   text-align: left;
-  padding: 0 10px;
 }
 
 
@@ -85,17 +84,16 @@
   .unemployed-div{
     bottom: 15%;
     max-width: 23%;
+    padding: 20px;
   }
   .hero-p2{
-    font-size: 17px;
+    font-size: 16px;
   }
+
   .hello-hero span {
     margin-left: 75px !important;
   }
 
 }
 
-@media only screen and (min-width: 1200px) {
-  
-}
 

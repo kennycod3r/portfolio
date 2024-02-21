@@ -1,13 +1,17 @@
 import "./App.css";
-import {useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 import Main from "./Maintexts/Main/Main";
 import Hero from "./Maintexts/Hero/Hero";
-import ProjectDisplay from "./Maintexts/ProjectDisplay";
+import ProjectDisplay from "./Maintexts/ProjectSection/ProjectDisplay";
 
 const App = () => {
+
+  const hrs= new Date().getHours();
+  const min= new Date().getMinutes();
+  let localTime = `${hrs}:${min}`;
   const comp = useRef(null);
   const sideBarComp = useRef(null);
 
@@ -45,12 +49,9 @@ const App = () => {
     return () => ctx.revert();
   }, []);
 
-
-
   function handleNavOpen() {
     setOpenNav(!openNav);
   }
-
 
   useLayoutEffect(() => {
     let sioa;
@@ -58,34 +59,33 @@ const App = () => {
     if (openNav) {
       sioa = gsap.context(() => {
         const timelineOpen = gsap.timeline();
-        timelineOpen.to("#sideNav", {
-          xPercent: "-100",
-          duration: 0.9,
-          delay: 0.1,
-          borderTopLeftRadius: 0,
-          borderBottomLeftRadius:0,
-          ease: "cubic-bezier(.7, 0, .3, 1);",
-        }).to(".Nav", {
-          yPercent: "-50",
-          opacity:1,
-          ease:"ease",
-          duration: 1,
-          delay: .1,
-          stagger: .5,
-
-        });
+        timelineOpen
+          .to("#sideNav", {
+            xPercent: "-100",
+            duration: 0.7,
+            delay: 0.1,
+            borderTopLeftRadius: 0,
+            borderBottomLeftRadius: 0,
+            ease: "cubic-bezier(.7, 0, .3, 1);",
+          })
+          .to(".Nav", {
+            opacity: 1,
+            ease: "elastic.in",
+            duration: 0.7,
+            delay: .1,
+            stagger: 0.3,
+          });
       }, comp);
-    }else {
-      sioa = gsap.context(() =>{
+    } else {
+      sioa = gsap.context(() => {
         const timelineClose = gsap.timeline();
-        timelineClose.to('#sideNav', {
+        timelineClose.to("#sideNav", {
           xPercent: "0",
           duration: 1,
-          ease: "cubic-bezier(.7, 0, .3, 1);"
+          ease: "cubic-bezier(.7, 0, .3, 1);",
         });
       }, comp);
     }
-
 
     return () => {
       if (sioa) {
@@ -106,28 +106,21 @@ const App = () => {
 
         <>
           {openNav && (
-            <div
-              id="sideNav"
-              className={
-                "fC side-nav" /*!openNav ? "fC side-nav" : "fC side-nav side-nav-active"*/
-              }
-              ref={sideBarComp}
-            >
-              <div className="Nav">Home</div>
-              <div className="Nav">About</div>
-              <div className="Nav">services</div>
-              <div className="Nav">Works</div>
-              <div className="Nav">Reviews</div>
-              <div className="Nav">Contact</div>
+            <div id="sideNav" className={"fC side-nav"} ref={sideBarComp}>
+              <div className="header--two Nav">Home</div>
+              <div className="header--two Nav">About</div>
+              <div className="header--two Nav">services</div>
+              <div className="header--two Nav">Works</div>
+              <div className="header--two Nav">Contact</div>
             </div>
           )}
         </>
 
         <main>
-          <Hero/>
+          <Hero />
           <Main />
-          <ProjectDisplay />
-          <Footer />
+          <ProjectDisplay localTime={localTime} />
+          <Footer localTime={localTime}/>
         </main>
       </div>
     </div>

@@ -1,11 +1,10 @@
 import "./Footer.css";
 import Button from "../Components/Button";
 
-export default function Footer() {
-  let localTime = new Date().toLocaleTimeString();
-
+export default function Footer({localTime}) {
+  
   return (
-    <section className="Homefooter">
+    <section className="Homefooter" id="Footer">
       <div className="footer--text">
         <p>Got a project? Need an unfair advantage?</p>
         <h1>Get in Touch.</h1>

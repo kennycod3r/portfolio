@@ -1,7 +1,6 @@
 import { useState } from "react";
-import "./Services.css";
 
-export default function Services(props) {
+export default function ServiceCard(props) {
   const [expand, setExpand] = useState(false);
 
   function handleExpand() {
