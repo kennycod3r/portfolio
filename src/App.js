@@ -45,54 +45,12 @@ const App = () => {
     return () => ctx.revert();
   }, []);
 
-  // let classList = openNav ? "fC side-nav" : "fC side-nav side-nav-active"
+
 
   function handleNavOpen() {
     setOpenNav(!openNav);
   }
 
-  /*
- function  toggle () {
-    if (openNav) {
-      this.classList.remove("active");
-      openSlidein();
-    } else {
-      this.classList.add("active");
-      closeSlideIn();
-    }
-    isOpen = !isOpen;
-  };
-
-
-
-  function openSlidein(){
-    let sioa = gsap.context(() =>{
-      const timelineOpen = gsap.timeline();
-      timeline.to('#sideNav',{
-        xPercent:"100",
-        duration:.8,
-        ease: Elastic
-      })
-    })
-
-    return sioa;
-  }
-
-  function openSlidein(){
-    let sica = gsap.context(()=>{
-    let timelineClose = gsap.timeline();
-
-    return () => sioa.revert();
-    
-
-
-
-    //timelineClose.to('#sideNav', {})
-    //closeTimeline.staggerFromTo(".navbar ul li",0.5,{ y: 0, opacity: 1, delay: 0.5 },{ y: 25, opacity: 0 },-0.1);
-    //closeTimeline.to("#bg-circle", 1, {scale: 0,ease: Expo.easeInOut,delay: -0.5});
-    //closeTimeline.to(".navbar", 0, { display: "none" });
-    })
-  };*/
 
   useLayoutEffect(() => {
     let sioa;
