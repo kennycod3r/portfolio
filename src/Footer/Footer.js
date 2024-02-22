@@ -3,7 +3,7 @@ import "./Footer.css";
 import Button from "../ComponentsUI/Button";
 
 export default function Footer({ localTime }) {
-  const [hovered, setHovered] = useState(false);
+  const [hovered, setHovered] = useState(true);
 
   return (
     <section
