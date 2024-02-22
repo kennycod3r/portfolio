@@ -1,4 +1,4 @@
-import ServiceCard from "../../Components/ServiceCard";
+import ServiceCard from "../../ComponentsUI/ServiceCard";
 import "./Services.css";
 
 export default function Services() {

@@ -1,10 +1,17 @@
+import React, { useState } from "react";
 import "./Footer.css";
-import Button from "../Components/Button";
+import Button from "../ComponentsUI/Button";
 
-export default function Footer({localTime}) {
-  
+export default function Footer({ localTime }) {
+  const [hovered, setHovered] = useState(false);
+
   return (
-    <section className="Homefooter" id="Footer">
+    <section
+      className="Homefooter"
+      id="Footer"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
       <div className="footer--text">
         <p>Got a project? Need an unfair advantage?</p>
         <h1>Get in Touch.</h1>
@@ -22,7 +29,7 @@ export default function Footer({localTime}) {
         <div className="footer-links body--text">
           <h3>SOCIALS</h3>
           <nav>
-            <p>linkdin</p>
+            <p>LinkedIn</p>
             <p>Instagram</p>
             <p>Behance</p>
             <p>Github</p>
@@ -32,7 +39,7 @@ export default function Footer({localTime}) {
         <div className="footer-links body--text hide-link">
           <h3>RESOURCES</h3>
           <nav>
-            <p>react.js</p>
+            <p>React.js</p>
             <p>GSAP</p>
             <p>PillerStack</p>
             <p>Figma</p>
@@ -41,11 +48,9 @@ export default function Footer({localTime}) {
       </div>
 
       <li className="arrow-up">
-          <div>up arrow</div>
-        </li>
-      <div>
-
-      </div>
+        <div>up arrow</div>
+      </li>
+      <div></div>
 
       <div className="info--btns fC">
         <Button text="@oguntolakenny6@gmail.com" />
@@ -54,10 +59,14 @@ export default function Footer({localTime}) {
 
       <div className="end--footer fsb">
         <a href="www.nowhere.com">version 2024</a>
-        <a href="www.nowhere.com">localTime  {localTime}</a>
+        <a href="www.nowhere.com">localTime {localTime}</a>
         <a href="www.nowhere.com">socials</a>
         <a href="www.nowhere.com">behance</a>
-        <a href="www.nowhere.com">linkdin</a>
+        <a href="www.nowhere.com">LinkedIn</a>
+      </div>
+
+      <div className="hamburger-menu" style={{ color: hovered ? "white" : "black" }}>
+        {/* Hamburger menu icon */}
       </div>
     </section>
   );

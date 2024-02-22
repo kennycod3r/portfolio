@@ -2,15 +2,23 @@ import React, { useState } from "react";
 import "./Hero.css";
 
 export default function Hero() {
-  let [en, setEn] = useState(false);
+  const [en, setEn] = useState(false);
+
+  const handleMouseEnter = () => {
+    setEn(true);
+  };
+
+  const handleMouseLeave = () => {
+    setEn(false);
+  };
 
   return (
     <div className="Hero fC">
       <div className="hero-line"></div>
       <div
         className="hello-text"
-        onMouseEnter={() => setEn(!en)}
-        onMouseLeave={() => setEn(!en)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <h1 id="welcome" className="innerDiv hello-hero header--one">
           Hi There, <br />
@@ -25,13 +33,9 @@ export default function Hero() {
         </div>
       </div>
       <div className="small-text">
-        <div
-          className="ken-mail fC"
-          style={en ? { animation: "rubberBand 2s" } : null}
-        >
+        <div className={`ken-mail fC ${en ? "rubberBand" : ""}`}>
           <span>kenny.lj</span>
-         <span> @kennyCod3r</span>
-         
+          <span>@kennyCod3r</span>
         </div>
       </div>
     </div>

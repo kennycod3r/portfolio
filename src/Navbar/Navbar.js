@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import HamburgerMenu from "../Components/Hamburger";
+import HamburgerMenu from "../ComponentsUI/Hamburger";
 
 export default function Navbar({ handleNavOpen, openNav }) {
   const [scrolledPastPoint, setScrolledPastPoint] = useState(false);

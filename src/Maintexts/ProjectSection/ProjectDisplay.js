@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ProjectCard from "../../Components/ProjectCard";
+import ProjectCard from "../../ComponentsUI/ProjectCard";
 import AboutMe from "../About-me/AboutMe";
 import Services from "../MyService/Services";
 import wifi from "../../img/wifiLogo.svg";
@@ -37,11 +37,11 @@ const ProjectDisplay = ({ localTime }) => {
 
   let gridBgScreen = {
     display: "grid",
-    gridTemplateColumns:"2fr 1.5fr",
+    gridTemplateColumns: "2fr 1.5fr",
     gridColumn: "auto",
     gap: "1em",
-    overflow:"hidden"
-  }
+    overflow: "hidden",
+  };
 
   useEffect(() => {
     function handleGrid() {
@@ -84,7 +84,11 @@ const ProjectDisplay = ({ localTime }) => {
               <>
                 <div
                   className="grid-bg-screen"
-                  style={bigScreen || window.innerWidth > 720 ? gridBgScreen : { display: "block" }}
+                  style={
+                    bigScreen || window.innerWidth > 720
+                      ? gridBgScreen
+                      : { display: "block" }
+                  }
                 >
                   {images.map((item, index) => (
                     <ProjectCard
