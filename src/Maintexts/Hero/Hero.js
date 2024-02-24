@@ -33,9 +33,15 @@ export default function Hero() {
         </div>
       </div>
       <div className="small-text">
-        <div className={`ken-mail fC ${en ? "rubberBand" : ""}`}>
+        <div
+          className={`ken-mail fC`}
+          style={en ? { animation: "rubberBand 1.5s" } : null}
+        >
           <span>kenny.lj</span>
           <span>@kennyCod3r</span>
+          <span class="material-symbols">
+            
+          </span>
         </div>
       </div>
     </div>

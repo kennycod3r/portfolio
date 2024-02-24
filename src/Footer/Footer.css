@@ -7,11 +7,14 @@
 }
 
 .Homefooter h1 {
-  font-weight: 400;
   font-style: normal;
   font-size: calc(clamp(3.25rem, 7vw, 8rem) * 0.875);
   line-height: 1.065;
   margin-top: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  
+  letter-spacing: .6px;
 }
 
 .footer--text {
@@ -86,7 +89,7 @@
 
 .info {
   font-size: 1rem;
-  padding: 2em;
+  padding: 1.5em;
   border: 0.0001px solid rgb(156, 156, 156);
   background-color: inherit;
   color: rgb(236, 233, 233);
@@ -203,30 +206,26 @@
 }
 @media only screen and (min-width: 1200px) {
     .Homefooter h3{
-        font-size: .5em;
+        font-size: 1em;
         padding: 0;
     }
     .Homefooter h1 {
         font-size: calc(clamp(3.25rem, 10vw, 8rem) * 0.875);
       }
     
-      .footer--text p {
-        font-size: 1em;
-      }
+ 
       .info--btns {
-        padding: 0;
+        padding: 1em;
         flex-direction: row;
       }
     
-      .info {
+      .info--btns .info {
         font-size: clamp(0.9em, .4vw, .5em);
         padding: 1.5em;
-        min-width: 18em;
-        border: 1px solid var(--linkColor);
       }
     
-      .Homefooter {
-        padding: 0 10em;
+      .footer-links nav p{
+        padding: 3px;
       }
     
       .Homefooter h1 {

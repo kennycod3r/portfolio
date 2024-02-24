@@ -107,7 +107,10 @@ const App = () => {
         <>
           {openNav && (
             <div id="sideNav" className={"fC side-nav"} ref={sideBarComp}>
-              <div className="header--two Nav">Home</div>
+              <div className="resume-div"><span className="o2">.resume</span>
+              <span className="o2">.Linkdin</span>
+              <span className="o2">.email</span></div>
+              <div className="header--two Nav div-line"><span className="o2">09</span>Home</div>
               <div className="header--two Nav">About</div>
               <div className="header--two Nav">services</div>
               <div className="header--two Nav">Works</div>

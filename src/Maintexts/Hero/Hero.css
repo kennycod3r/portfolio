@@ -32,10 +32,13 @@
 .hello-hero em{
   color: var(--primary);
   transition: all ease .4s;
+  font-style: italic;
+  display: inline-block;
 }
 
 .hello-hero em:hover{
-  padding: 20px;
+  padding:0  20px;
+  font-style: oblique;
 }
 
 .unemployed-div{

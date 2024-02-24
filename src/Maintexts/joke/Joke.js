@@ -5,7 +5,7 @@ export default function Joke() {
   return (
     <>
       <div className="jokes">
-        <h2 className="header--three">
+        <h2 className="header--three about-me-header">
           In Summary<br></br>
           Why Employ Me....
         </h2>

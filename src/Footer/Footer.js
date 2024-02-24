@@ -14,7 +14,7 @@ export default function Footer({ localTime }) {
     >
       <div className="footer--text">
         <p>Got a project? Need an unfair advantage?</p>
-        <h1>Get in Touch.</h1>
+        <h1 className="header--two body--header">Get in Touch.</h1>
       </div>
 
       <div className="fsb footer-links-div">

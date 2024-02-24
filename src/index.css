@@ -1,5 +1,4 @@
 
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -23,6 +22,11 @@ body {
   justify-content: space-between;
 }
 
+.flex{
+  display: flex;
+  align-items: center;
+}
+
 .fC {
   display: flex;
   align-items: center;
@@ -41,51 +45,32 @@ body {
 }
 
 
-.header--text {
-  text-transform: uppercase;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.75;
-}
 
-.btns {
-  padding: 2em;
-  outline: none;
-  border: none;
-  border: 0.0001px solid rgb(255, 255, 255);
-  background-color: inherit;
-  color: var(--secondary);
-  border-radius: 3em;
-  overflow: hidden;
-  margin-top: 20px;
-  position: relative;
-  z-index: 1;
-  min-width: 250px;
-}
-
+/* only applys on my hero text*/
 .header--one {
   text-shadow: var(--boxShadow);
-  font-size: clamp(3.55em, 2.3vw, 2.5em);
+  font-size: clamp(4.2em, 2.3vw, 2.5em);
   line-height: 0.8;
-  font-weight: 700;
+  font-weight: 800;
+  padding: 0 20px ;
+  text-align: left;
+ 
 }
+
+/* applys on my body header text*/
 .header--two {
   display: block;
   font-size: 2rem;
   font-weight: bold;
   color: pink;
 }
+
+/*light header applys on my about header text*/
 .header--three {
   font-weight: 400;
-  padding: 2em 0;
   font-size: 2rem;
 }
-
-
-.button-font{
-  font-size: 1em;
-}
-
+/*header--two  applys on my main section header text*/
 
 
 .body--text {
@@ -102,23 +87,41 @@ body {
   padding: 1.3em;
   text-align: left;
   color: var(--primary);
-  max-width: 30em;
   min-width: 100%;
   line-height: 1.6em;
+
 }
 
-@media only screen and (min-width: 1000px) {
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+
+
+
+@media only screen and (max-width: 380px){
+  .header--one{
+    font-size: clamp(3.2em, 2.3vw, 2.5em);
+  }
+  
+}
+
+
+@media only screen and (min-width: 1100px) {
   .header--one {
     font-size: clamp(3rem,-.057rem + 8vw,7.25rem);
-   
+    letter-spacing: -.5dvh;
   }
 
   .header--two{
-    font-size: 4rem;
     font-size: calc(clamp(3.25em, 7vw, 8em) * .375);
   }
 
-  .button-font{
-    font-size: 1em;
-  }
+
 }

@@ -15,8 +15,8 @@ export default function ServiceCard(props) {
         </div>
         {expand ? (
           <p className="body--text-2">
-            My obsession is to deliver a digital experience that not only serves
-            a great purpose, but give your business an unfair advantage.
+            <span className="o2">{props.textNumber}</span>
+            {props.servicesText}
           </p>
         ) : null}
       </div>
