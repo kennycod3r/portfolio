@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Footer.css";
 import Button from "../ComponentsUI/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faArrowUp} from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer({ localTime }) {
   const [hovered, setHovered] = useState(true);
@@ -48,7 +50,9 @@ export default function Footer({ localTime }) {
       </div>
 
       <li className="arrow-up">
-        <div>up arrow</div>
+        <div>
+        <FontAwesomeIcon icon={faArrowUp} />
+        </div>
       </li>
       <div></div>
 

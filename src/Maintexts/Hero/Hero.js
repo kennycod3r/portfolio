@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Hero.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Hero() {
   const [en, setEn] = useState(false);
@@ -39,8 +41,8 @@ export default function Hero() {
         >
           <span>kenny.lj</span>
           <span>@kennyCod3r</span>
-          <span class="material-symbols">
-            
+          <span>
+          <FontAwesomeIcon icon={faAnglesDown} />
           </span>
         </div>
       </div>
